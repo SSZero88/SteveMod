@@ -1,0 +1,8 @@
+﻿- Name: SteveMod
+  Version: 3.2.0
+  DLL: SteveMod.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.0.0
+    - Name: CelesteNet.Client
+      Version: 1.0.0

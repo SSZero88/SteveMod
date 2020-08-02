@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5D0239D-FF95-4897-9484-1898AB7E82F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Celeste</RootNamespace>
+    <AssemblyName>Celeste.Mod.mm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OutputPath Condition=" '$(TravisCore)' == 'true' ">Artifact\</OutputPath>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath Condition=" '$(TravisCore)' == '' ">bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Celeste.Mod.mm.xml</DocumentationFile>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath Condition=" '$(TravisCore)' == '' ">bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType Condition=" '$(TravisCore)' == '' ">pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Celeste">
+      <HintPath>..\lib-stripped\Celeste.exe</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetZip">
+      <HintPath>..\lib\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="FNA">
+      <HintPath>..\lib-stripped\FNA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HookedMethod, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\HookedMethod.0.3.3-beta\lib\net45\HookedMethod.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="I18N">
+      <HintPath>..\lib\I18N.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.CJK">
+      <HintPath>..\lib\I18N.CJK.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.MidEast">
+      <HintPath>..\lib\I18N.MidEast.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Other">
+      <HintPath>..\lib\I18N.Other.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Rare">
+      <HintPath>..\lib\I18N.Rare.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.West">
+      <HintPath>..\lib\I18N.West.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.Mdb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.Pdb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\packages\Mono.Cecil.0.10.0\lib\net35\Mono.Cecil.Rocks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MonoMod">
+      <HintPath>..\lib\MonoMod.exe</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\lib\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour.HookGen">
+      <HintPath>..\lib\MonoMod.RuntimeDetour.HookGen.exe</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\lib\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Steamworks.NET">
+      <HintPath>..\lib-stripped\Steamworks.NET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ValueTuple">
+      <HintPath>$(SolutionDir)\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet">
+      <HintPath>..\lib\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mod\Core\CoreModuleSaveData.cs" />
+    <Compile Include="Mod\Core\CoreModuleSettings.cs" />
+    <Compile Include="Mod\Entities\CustomMemorialText.cs" />
+    <Compile Include="Mod\Entities\CustomMemorial.cs" />
+    <Compile Include="Mod\Entities\CustomCoreMessage.cs" />
+    <Compile Include="Mod\Entities\LevelFlagTrigger.cs" />
+    <Compile Include="Mod\Everest\Emoji.cs" />
+    <Compile Include="Mod\Everest\Everest.DebugRC.cs" />
+    <Compile Include="Mod\Everest\Everest.Discord.cs" />
+    <Compile Include="Mod\Everest\RCEndPoint.cs" />
+    <Compile Include="Mod\Helpers\DiscordRpc.cs" />
+    <Compile Include="Mod\Touch\TouchInputNodes.cs" />
+    <Compile Include="Mod\Touch\TouchRegion.cs" />
+    <Compile Include="Mod\Touch\TouchInputManager.cs" />
+    <Compile Include="Mod\Everest\Everest.Flags.cs" />
+    <Compile Include="Mod\Everest\TextInput.cs" />
+    <Compile Include="Mod\Helpers\XNAFormsHook.cs" />
+    <Compile Include="Mod\Helpers\Commands.cs" />
+    <Compile Include="Mod\Everest\Everest.Update.cs" />
+    <Compile Include="Mod\Helpers\FakeAssembly.cs" />
+    <Compile Include="Mod\Helpers\RelinkerSymbolReaderProvider.cs" />
+    <Compile Include="Mod\Module\EverestModuleBinarySaveData.cs" />
+    <Compile Include="Mod\Module\EverestModuleSaveData.cs" />
+    <Compile Include="Mod\Module\EverestModuleBinarySettings.cs" />
+    <Compile Include="Mod\Module\EverestModuleSettings.cs" />
+    <Compile Include="Mod\Module\EverestModuleMetadata.cs" />
+    <Compile Include="Mod\Everest\ModAsset.cs" />
+    <Compile Include="Mod\Everest\ContentExtensions.cs" />
+    <Compile Include="Mod\Everest\Everest.Events.cs" />
+    <Compile Include="Mod\Everest\Everest.Content.cs" />
+    <Compile Include="Mod\Everest\Everest.Relinker.cs" />
+    <Compile Include="Mod\Everest\Everest.Loader.cs" />
+    <Compile Include="Mod\Everest\Everest.cs" />
+    <Compile Include="Mod\Core\CoreModule.cs" />
+    <Compile Include="Mod\Helpers\EverestContentManager.cs" />
+    <Compile Include="Mod\Module\EverestModule.cs" />
+    <Compile Include="Mod\Everest\Extensions.cs" />
+    <Compile Include="Mod\Helpers\FakeFileStream.cs" />
+    <Compile Include="Mod\Helpers\LogWriter.cs" />
+    <Compile Include="Mod\Everest\Logger.cs" />
+    <Compile Include="Mod\Everest\MTextureOverride.cs" />
+    <Compile Include="Mod\Helpers\FileProxy.cs" />
+    <Compile Include="Mod\Meta\IMeta.cs" />
+    <Compile Include="Mod\Meta\TextureMeta.cs" />
+    <Compile Include="Mod\Meta\MapMeta.cs" />
+    <Compile Include="Mod\Meta\MTextureMeta.cs" />
+    <Compile Include="Mod\Helpers\YamlHelper.cs" />
+    <Compile Include="Mod\UI\OuiHelper_Shutdown.cs" />
+    <Compile Include="Mod\UI\OuiHelper_ChapterSelect_LevelSet.cs" />
+    <Compile Include="Mod\UI\OuiSoundTest.cs" />
+    <Compile Include="Mod\UI\OuiModOptionString.cs" />
+    <Compile Include="Mod\UI\OuiLoggedProgress.cs" />
+    <Compile Include="Mod\UI\OuiVersionList.cs" />
+    <Compile Include="Mod\UI\SubHudRenderer.cs" />
+    <Compile Include="Mod\UI\TextMenuExt.cs" />
+    <Compile Include="Mod\UI\OuiMapList.cs" />
+    <Compile Include="Mod\UI\OuiModOptions.cs" />
+    <Compile Include="MonoModRules.cs" />
+    <Compile Include="Patches\FancyText.cs" />
+    <Compile Include="Patches\Monocle\PixelFontSize.cs" />
+    <Compile Include="Patches\Fonts.cs" />
+    <Compile Include="Patches\OuiFileNaming.cs" />
+    <Compile Include="Patches\Sfxs.cs" />
+    <Compile Include="Patches\Audio.cs" />
+    <Compile Include="Patches\FMOD\Studio\EventDescription.cs" />
+    <Compile Include="Patches\GameplayRenderer.cs" />
+    <Compile Include="Patches\CompleteRenderer.cs" />
+    <Compile Include="Patches\AreaKey.cs" />
+    <Compile Include="Patches\AreaComplete.cs" />
+    <Compile Include="Patches\BinaryPacker.cs" />
+    <Compile Include="Patches\GameLoader.cs" />
+    <Compile Include="Patches\LevelLoader.cs" />
+    <Compile Include="Patches\LevelExit.cs" />
+    <Compile Include="Patches\MapData.cs" />
+    <Compile Include="Patches\AreaStats.cs" />
+    <Compile Include="Patches\LevelEnter.cs" />
+    <Compile Include="Patches\Input.cs" />
+    <Compile Include="Patches\Monocle\ErrorLog.cs" />
+    <Compile Include="Patches\Monocle\RendererList.cs" />
+    <Compile Include="Patches\OuiFileSelectSlot.cs" />
+    <Compile Include="Patches\OuiChapterPanel.cs" />
+    <Compile Include="Patches\OuiChapterSelectIcon.cs" />
+    <Compile Include="Patches\OuiChapterSelect.cs" />
+    <Compile Include="Patches\OverworldLoader.cs" />
+    <Compile Include="Patches\Overworld.cs" />
+    <Compile Include="Patches\Strawberry.cs" />
+    <Compile Include="Patches\UserIO.cs" />
+    <Compile Include="Patches\SaveData.cs" />
+    <Compile Include="Patches\Monocle\EntityList.cs" />
+    <Compile Include="Patches\Tags.cs" />
+    <Compile Include="Patches\TextMenu.cs" />
+    <Compile Include="Patches\MainMenuSmallButton.cs" />
+    <Compile Include="Patches\Monocle\Engine.cs" />
+    <Compile Include="Patches\Level.cs" />
+    <Compile Include="Patches\Player.cs" />
+    <Compile Include="Patches\PlayerHair.cs" />
+    <Compile Include="Patches\AreaData.cs" />
+    <Compile Include="Patches\Autotiler.cs" />
+    <Compile Include="Patches\Monocle\VirtualAsset.cs" />
+    <Compile Include="Patches\Monocle\MTexture.cs" />
+    <Compile Include="Patches\Monocle\VirtualTexture.cs" />
+    <Compile Include="Patches\Monocle\VirtualContent.cs" />
+    <Compile Include="Patches\Monocle\Calc.cs" />
+    <Compile Include="Patches\Monocle\Atlas.cs" />
+    <Compile Include="Patches\Monocle\SpriteBank.cs" />
+    <Compile Include="Patches\Monocle\Commands.cs" />
+    <Compile Include="Patches\Monocle\Coroutine.cs" />
+    <Compile Include="Patches\OuiMainMenu.cs" />
+    <Compile Include="Patches\Dialog.cs" />
+    <Compile Include="Patches\OuiTitleScreen.cs" />
+    <Compile Include="Patches\Celeste.cs" />
+    <Compile Include="Patches\OuiJournal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Dialog\English.txt">
+      <LogicalName>Content\Dialog\English.txt</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\emoji\thinking.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\emoji\thinking.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\emoji\thinkingbw.m.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\emoji\thinkingbw.m.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\emoji\glad.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\emoji\glad.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\emoji\gladbw.m.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\emoji\gladbw.m.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\menu\everest.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\menu\everest.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\menu\modoptions.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\menu\modoptions.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\menu\modoptions.meta.yaml">
+      <LogicalName>Content\Graphics\Atlases\Gui\menu\modoptions.meta.yaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\menu\maplist.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\menu\maplist.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\menu\maplist.meta.yaml">
+      <LogicalName>Content\Graphics\Atlases\Gui\menu\maplist.meta.yaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\steam.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\steam.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\steam.meta.yaml">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\steam.meta.yaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\steam_back.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\steam_back.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\steam_back.meta.yaml">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\steam_back.meta.yaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\null.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\null.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\null.meta.yaml">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\null.meta.yaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\null_back.png">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\null_back.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\Graphics\Atlases\Gui\areas\null_back.meta.yaml">
+      <LogicalName>Content\Graphics\Atlases\Gui\areas\null_back.meta.yaml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\lib-ext\discord-rpc.dll">
+      <Link>discord-rpc.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib-fna\libjpeg-9.dll">
+      <Link>libjpeg-9.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib-fna\libpng16-16.dll">
+      <Link>libpng16-16.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib-fna\SDL2_image.dll">
+      <Link>SDL2_image.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib-fna\zlib1.dll">
+      <Link>zlib1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib\YamlDotNet.xml">
+      <Link>YamlDotNet.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib-ext\libdiscord-rpc.dylib">
+      <Link>libdiscord-rpc.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\lib-ext\libdiscord-rpc.so">
+      <Link>libdiscord-rpc.so</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,81 @@
+﻿# NOTES:
+# The # Symbol at the start of a line counts as a Comment. To include in dialog, use a \#
+# The . Symbol will cause a pause unless escaped with \. (ex: Mr. Oshiro has a pause, Mr\. Oshiro does not)
+# Newlines automatically create a Page Break, unless there is an {n} command on the previous line
+# Commands: Anything inside of curly braces {...} is a command and should not be translated.
+
+# Inline Text Commands:
+# {~}wavy text{/~}
+# {!}impact text{/!}
+# {>> x}changes speed at which characters are displayed{>>}
+# {# 000000}this text is black{#} (uses HEX color values)
+# {+MENU_BEGIN} inserts the dialog from the MENU_BEGIN value (in English, "CLIMB")
+# {n} creates a newline, without a page break
+# {0.5} creates a 0.5 second pause
+# {big}this text is large{/big}
+
+# Gameplay Control Commands (should never change)
+# {trigger x} this triggers an in-game event
+# {anchor} controls the visual position of the textbox in-game
+
+# Helper Postcards
+	POSTCARD_LEVELGONE= 		{big}Thank you ((player))!{/big}{n}But our {#ff1144}((sid)){#} is on another mountain.
+	POSTCARD_LEVELLOADFAILED= 	{big}Sorry!{/big}{n}But {#ff1144}((sid)){#} has failed loading.{n}Please submit your {#44adf7}log.txt{#}{n}to the map builder.
+
+# Main Menu
+	MENU_TITLETOUCH= 		TOUCH
+	MENU_MAPLIST= 			Map List
+	MENU_MODOPTIONS= 		Mod Options
+	MENU_PAUSE_MODOPTIONS= 	Mod Options
+
+# Mod Options
+	MODOPTIONS_TITLE= 										EVEREST
+
+# Core Module Options
+	MODOPTIONS_COREMODULE_UPDATE= 							Update to v.((version))
+	MODOPTIONS_COREMODULE_VERSIONLIST= 						~Version List~
+	MODOPTIONS_COREMODULE_TITLE= 							Everest Core
+	MODOPTIONS_COREMODULE_LAUNCHINDEBUGMODE= 				Launch as Debug Build
+	MODOPTIONS_COREMODULE_LAUNCHWITHFMODLIVEUPDATE= 		Launch w/ FMOD Live Update
+	MODOPTIONS_COREMODULE_INPUTGUI= 						Input Prompts
+	MODOPTIONS_COREMODULE_INPUTGUI_= 						AUTO
+	MODOPTIONS_COREMODULE_INPUTGUI_KEYBOARD= 				KEYBOARD
+	MODOPTIONS_COREMODULE_INPUTGUI_NS= 						SWITCH
+	MODOPTIONS_COREMODULE_INPUTGUI_NS_LEFTJOYCON= 			SWITCH L
+	MODOPTIONS_COREMODULE_INPUTGUI_NS_RIGHTJOYCON= 			SWITCH R
+	MODOPTIONS_COREMODULE_INPUTGUI_PS4= 					PS4
+	MODOPTIONS_COREMODULE_INPUTGUI_XB1= 					XBONE
+	MODOPTIONS_COREMODULE_INPUTGUI_TOUCH= 					TOUCH
+	MODOPTIONS_COREMODULE_LAZYLOADING=						Lazy Loading
+	MODOPTIONS_COREMODULE_LQATLAS=							Prefer LQ Atlases
+	MODOPTIONS_COREMODULE_NONTHREADEDGL=					Non-Threaded GL
+	
+	MODOPTIONS_COREMODULE_RECRAWL= 							~Reload Assets~
+
+	MODOPTIONS_COREMODULE_SOUNDTEST= 						Sound Test
+
+# Sound Test
+	SOUNDTEST_TITLE=	SOUND TEST
+
+# Maplist
+	MAPLIST_TITLE= 			MAP LIST
+	MAPLIST_FILTERS= 		Filters
+	MAPLIST_TYPE= 			From
+	MAPLIST_TYPE_ALLMODS= 	All Mods
+	MAPLIST_SIDE= 			Side
+	MAPLIST_LIST= 			Maps
+	MAPLIST_UNCATEGORIZED= 	Uncategorized
+
+	LEVELSET_CELESTE= 		Celeste
+	LEVELSET_= 				Uncategorized
+
+# Updater
+	UPDATER_TITLE= 					UPDATER
+	UPDATER_VERSIONS_TITLE= 		VERSION LIST
+	UPDATER_VERSIONS_CURRENT= 		Installed: v.((version))
+	UPDATER_VERSIONS_REQUESTING= 	Refreshing...
+	
+	UPDATER_VERSIONS_ERR_DOWNLOAD= 	Failed downloading version list.
+	UPDATER_VERSIONS_ERR_FORMAT= 	Unknown format.
+	
+	UPDATER_SRC_TRAVIS= 			Automatic Builds
